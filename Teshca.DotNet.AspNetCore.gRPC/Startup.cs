@@ -32,6 +32,7 @@ namespace Teshca.DotNet.AspNetCore.gRPC
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<ServerStreamService>();
 
                 endpoints.MapGet("/", async context =>
                 {

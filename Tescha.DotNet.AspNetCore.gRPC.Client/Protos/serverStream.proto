@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "Teshca.DotNet.AspNetCore.gRPC.Client";
+
+package serverStream;
+
+// The ServerStreaming service definition.
+service ServerStreaming {
+  // Strats streaming from server
+  rpc StreamingFromServer (google.protobuf.Empty) returns (stream SampleServerResponse);
+}
+
+// The response message.
+message SampleServerResponse {
+  string message = 1;
+}
